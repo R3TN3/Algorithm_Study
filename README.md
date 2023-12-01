@@ -1,2 +1,3 @@
-# algorithm
-Studying Algorithm
+# Algorithm Study
+
+Studying Algorith
