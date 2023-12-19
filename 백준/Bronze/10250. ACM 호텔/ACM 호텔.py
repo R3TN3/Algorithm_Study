@@ -2,10 +2,10 @@ t = int(input())
 
 for i in range(t):
   h, w, n = map(int, input().split())
-  floar = n % h
+  floor = n % h
   room = n // h + 1
 
-  if floar == 0:
-    floar = h
+  if floor == 0:
+    floor = h
     room -= 1
-  print(floar * 100 + room)
+  print(floor * 100 + room)
