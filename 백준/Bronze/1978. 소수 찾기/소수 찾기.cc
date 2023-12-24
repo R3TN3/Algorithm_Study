@@ -8,11 +8,10 @@ int main() {
 
   cin >> n;
 
-  for (i = 0; i < n; i++)
-    cin >> s[i];
-
   for (i = 0; i < n; i++) {
     int tmp = 0;
+    cin >> s[i];
+    
     if (s[i] == 1)
       continue;
 
