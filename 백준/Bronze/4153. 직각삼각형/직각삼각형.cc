@@ -3,6 +3,7 @@ using namespace std;
 
 int main() {
   int a, b, c;
+  int tmp;
 
   for (;;) {
     cin >> a >> b >> c;
@@ -10,25 +11,21 @@ int main() {
     if (a == 0 && b == 0 && c == 0)
       break;
 
-    if (a > b && a > c) {
-      if (a * a == b * b + c * c)
-        cout << "right" << "\n";
-      else
-        cout << "wrong" << "\n";
+    if (b > a) {
+      tmp = a;
+      a = b;
+      b = tmp;
     }
 
-    if (b > a && b > c) {
-      if (b * b == a * a + c * c)
+    if (c > a) {
+      tmp = a;
+      a = c;
+      c = tmp;
+    }
+    
+    if (a * a == b * b + c * c)
         cout << "right" << "\n";
       else
         cout << "wrong" << "\n";
-    }
-
-    if (c > a && c > b) {
-      if (c * c == a * a + b * b)
-        cout << "right" << "\n";
-      else
-        cout << "wrong" << "\n";
-    }
   }
 }
