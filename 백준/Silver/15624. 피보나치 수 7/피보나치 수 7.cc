@@ -1,22 +1,13 @@
 #include <iostream>
 using namespace std;
 
-int fib(int n) {
-  long a = 0, b = 1, tmp;
-
-  for (int i = 0; i < n; i++) {
-    tmp = a;
-    a = b;
-    b += tmp;
-  }
-
-  return a;
-}
-
 int main() {
   int n;
   cin >> n;
-  long i = 1000000007;
+  int dp[1000000] = {0,1};
 
-  cout << fib(n) % i << "\n";
+  for (int i = 2; i <= n; i++)
+    dp[i] = (dp[i-1] + dp[i-2]) % 1000000007;
+
+  cout << dp[n] << "\n";
 }
